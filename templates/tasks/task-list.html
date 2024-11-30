@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TODO</title>
+</head>
+<body>
+<h1>Task create</h1>
+<form method="get">
+    <label for="title">Title</label><br>
+    <input type="text" name="title" id="title">
+    <br>
+    <label for="description">Description</label><br>
+    <textarea name="description" id="description" cols="30" rows="10"></textarea>
+    <br>
+    <label for="is_completed">Is completed</label><br>
+    <input type="checkbox" name="is_completed" id="is_completed">
+    <br>
+    <input type="submit" value="Create task">
+</form>
+<h2>TASK LIST</h2>
+<table border="1">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Is completed</th>
+    </tr>
+   </thead>
+   <tbody>
+   {% for task in tasks %}
+     <tr>
+       <td>{{ task.id }}</td>
+       <td>{{ task.title }}</td>
+       <td>{{ task.description }}</td>
+       <td>{{ task.is_completed }}</td>
+     </tr>
+   {% endfor %}
+  </tbody>
+</table>
+</body>
+</html>
