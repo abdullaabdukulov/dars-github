@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meal Management</title>
+    <title>Tasks add</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -62,11 +62,11 @@
 </head>
 <body>
 
-    <h1>Meal Management</h1>
+    <h1>Tasks add</h1>
 
     <form method="get">
-        <label for="vazifa_nomi">Create New Meal</label>
-        <input type="text" id="vazifa_nomi" name="vazifa_nomi" placeholder="Vazifa Name" required>
+        <label for="vazifa_nomi">Create New Task</label>
+        <input type="text" id="vazifa_nomi" name="vazifa_nomi" placeholder="Vazifa Nomi" required>
 
         <label for="vazifa_tafsifi">Tafsif</label>
         <textarea id="vazifa_tafsifi" name="vazifa_tafsifi" placeholder="Vazifa tafsifi" required></textarea>
@@ -75,20 +75,16 @@
         <label for="status">Status</label>
         <textarea id="status" name="status" placeholder="Status" required></textarea>
 
-
-
-
         <button type="submit">Create vazifa</button>
     </form>
-
     <table>
         <thead>
             <tr>
-                <th>Meal</th>
-                <th>Ingredients</th>
-                <th>Price</th>
-                <th>Type</th>
-                <th>Cuisine</th>
+                <th>Id</th>
+                <th>Vazifa Nomi</th>
+                <th>Tafsifi</th>
+                <th>Status</th>
+
             </tr>
         </thead>
         <tbody>
@@ -105,8 +101,6 @@
                 <td colspan="5">No Student added yet.</td>
             </tr>
                 {% endfor %}
-
-
         </tbody>
     </table>
 
